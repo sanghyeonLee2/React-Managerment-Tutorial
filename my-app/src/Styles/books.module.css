@@ -1,0 +1,60 @@
+.layout {
+  width: 70%;
+  margin: 0 auto;
+}
+.layout .gnb {
+  padding: 20px;
+  background-color: skyblue;
+}
+.layout .main {
+  background-color: yellow;
+}
+.layout .main:after {
+  clear: both;
+  display: block;
+  content: "";
+}
+
+.layout .main .lnb {
+  float: left;
+  width: fit-content;
+  height: fit-content;
+  background-color: azure;
+}
+.layout .main .content {
+  float: left;
+  width: 80%;
+  background-color: bisque;
+}
+.layout .footer {
+  padding: 15px;
+  background-color: #ddd;
+}
+
+li {
+  position: relative;
+  right: 14px;
+  list-style: none;
+  text-align: center;
+  border-radius: 25px;
+  margin: 10px;
+  width: 80px;
+  height: 30px;
+  background-color: #eee;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 1px 4px 0 rgb(0, 0, 0, 0.5);
+}
+li:active {
+  box-shadow: 1px 1px 0 rgb(0, 0, 0, 0.5);
+  position: relative;
+  top: 2px;
+}
+li:hover {
+  animation-name: fadeIn;
+  animation-duration: 0.4s;
+  color: white;
+  background: rgb(255, 7, 7);
+  cursor: pointer;
+  /*box-shadow: 0 2px 4px rgba(0, 79, 255, 0.6);*/
+}

@@ -1,0 +1,85 @@
+{
+  "bookList": [
+    {
+      "id": 1,
+      "price": "6000원",
+      "title": "책1",
+      "publisher": "출판사1",
+      "writer": "작가1",
+      "genre": "에세이",
+      "rate": 10.0
+    },
+    {
+      "id": 2,
+      "price": "7000원",
+      "title": "책2",
+      "publisher": "출판사2",
+      "writer": "작가2",
+      "genre": "소설/시",
+      "rate": 9.0
+    },
+    {
+      "id": 3,
+      "price": "8000원",
+      "title": "책3",
+      "publisher": "출판사3",
+      "writer": "작가3",
+      "genre": "예술",
+      "rete": 7.5
+    },
+    {
+      "id": 4,
+      "price": "3400원",
+      "title": "책4",
+      "publisher": "출판사4",
+      "writer": "작가4",
+      "genre": "종교",
+      "rete": 10.0
+    },
+    {
+      "id": 5,
+      "price": "6000원",
+      "title": "책5",
+      "publisher": "출판사5",
+      "writer": "작가5",
+      "genre": "사회",
+      "rete": 7.3
+    },
+    {
+      "id": 6,
+      "price": "2000원",
+      "title": "책6",
+      "publisher": "출판사6",
+      "writer": "작가6",
+      "genre": "과학",
+      "rete": 5.2
+    },
+    {
+      "id": 7,
+      "price": "10000원",
+      "title": "책7",
+      "publisher": "출판사7",
+      "writer": "작가7",
+      "genre": "경제/경영",
+      "rete": 9.2
+    },
+    {
+      "id": 8,
+      "price": "1000원",
+      "title": "책8",
+      "publisher": "출판사8",
+      "writer": "작가8",
+      "genre": "만화",
+      "rete": 2.0
+    },
+    {
+      "id": 9,
+      "price": "6500원",
+      "title": "책9",
+      "publisher": "출판사9",
+      "writer": "작가9",
+      "genre": "잡지",
+      "rete": 8.3
+    }
+  ]
+}
