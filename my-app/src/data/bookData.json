@@ -25,7 +25,7 @@
       "publisher": "출판사3",
       "writer": "작가3",
       "genre": "예술",
-      "rete": 7.5
+      "rate": 7.5
     },
     {
       "id": 4,
@@ -34,7 +34,7 @@
       "publisher": "출판사4",
       "writer": "작가4",
       "genre": "종교",
-      "rete": 10.0
+      "rate": 10.0
     },
     {
       "id": 5,
@@ -43,7 +43,7 @@
       "publisher": "출판사5",
       "writer": "작가5",
       "genre": "사회",
-      "rete": 7.3
+      "rate": 7.3
     },
     {
       "id": 6,
@@ -52,7 +52,7 @@
       "publisher": "출판사6",
       "writer": "작가6",
       "genre": "과학",
-      "rete": 5.2
+      "rate": 5.2
     },
     {
       "id": 7,
@@ -61,7 +61,7 @@
       "publisher": "출판사7",
       "writer": "작가7",
       "genre": "경제/경영",
-      "rete": 9.2
+      "rate": 9.2
     },
     {
       "id": 8,
@@ -70,7 +70,7 @@
       "publisher": "출판사8",
       "writer": "작가8",
       "genre": "만화",
-      "rete": 2.0
+      "rate": 2.0
     },
     {
       "id": 9,
@@ -79,7 +79,16 @@
       "publisher": "출판사9",
       "writer": "작가9",
       "genre": "잡지",
-      "rete": 8.3
+      "rate": 8.3
+    },
+    {
+      "id": 10,
+      "price": "9500원",
+      "title": "책10",
+      "publisher": "출판사10",
+      "writer": "작가10",
+      "genre": "만화",
+      "rate": 7.2
     }
   ]
 }

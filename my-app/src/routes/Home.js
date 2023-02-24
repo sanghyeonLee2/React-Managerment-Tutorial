@@ -2,6 +2,7 @@ import { useState } from "react";
 import Books from "../component/Books";
 import styles from "../Styles/books.module.css";
 import bookData from "../data/bookData.json";
+import { Link } from "react-router-dom";
 
 function Home() {
   const bookList = bookData.bookList;
@@ -11,8 +12,7 @@ function Home() {
   // useEffect
 
   const onClick = (event) => {
-    event.preventDefault();
-    // 클릭된 엘리먼트가 li 태그인 경우에만 처리
+    event.preventDefault(); // 클릭된 엘리먼트가 li 태그인 경우에만 처리
     setSearch(
       bookList.filter((book) => book.genre.includes(event.target.textContent))
     );
@@ -22,10 +22,11 @@ function Home() {
     setSearch(
       bookList.filter((book) => book.title.includes(event.target.text.value))
     );
-    // setItemState("검색");
-    // setAllBooks(false);
   };
-  const total = () => (search.length = 0);
+  const total = (event) => {
+    event.preventDefault();
+    setSearch(bookList.slice(0, 0));
+  };
 
   return (
     <div className={styles.layout}>
@@ -40,11 +41,13 @@ function Home() {
           <option value="리뷰">리뷰</option>
         </select>
         <form onSubmit={onSubmit}>
-          <input type="text" name="text" required />
+          <input type="search" name="text" required />
           <input type="submit" value="검색" />
         </form>
-        <input type="button" value="장바구니" />
         <input type="button" value="마이페이지" />
+        <Link to={`/logIn/`}>
+          <h1>로그인</h1>
+        </Link>
       </div>
       <div className={styles.main}>
         <div className={styles.lnb}>
@@ -64,9 +67,6 @@ function Home() {
         </div>
         <div>
           <Books searchBook={search} />
-          {/* searchBook={search}
-            itemState={itemState}
-            allBooks={allBooks} */}
         </div>
       </div>
     </div>
