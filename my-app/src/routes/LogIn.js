@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function logIn(props) {
+function logIn() {
   const onSubmit = () => {};
   return (
     <div>
@@ -24,9 +24,9 @@ function logIn(props) {
           <small>아이디 저장</small>
         </label>
         <br />
-        <small onClick>아이디찾기 </small>|<small onClick> 비밀번호찾기 </small>
+        <small>아이디찾기 </small>|<small> 비밀번호찾기 </small>
         <Link to={"signUp/"}>
-          |<small onClick> 회원가입</small>
+          |<small> 회원가입</small>
         </Link>
       </form>
       <div>
@@ -40,8 +40,7 @@ function logIn(props) {
           <input type="password" placeholder="주문비밀번호" />
           <input type="submit" value="로그인" />
           <br />
-          <small onClick>주문비밀번호 찾기</small>|{" "}
-          <small onClick> 회원가입 </small>
+          <small>주문비밀번호 찾기</small>| <small> 회원가입 </small>
         </form>
       </div>
     </div>

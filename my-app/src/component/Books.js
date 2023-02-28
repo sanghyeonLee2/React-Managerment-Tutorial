@@ -7,13 +7,14 @@ import { useNavigate } from "react-router-dom";
 function Books({ searchBook = [] }) {
   const navigate = useNavigate();
   const bookList = bookData.bookList;
-  const [cnt, setCnt] = useState(0);
   const [cart, setCart] = useState([]);
 
   const cartOnClick = (book) => {
-    cart.push(book);
-    setCart(cart);
-    setCnt(cnt + 1);
+    book.num += 1;
+    if (book.num === 1) {
+      cart.push(book);
+      setCart(cart);
+    }
   };
   return (
     <div className={styles.content}>
@@ -49,13 +50,12 @@ function Books({ searchBook = [] }) {
             </div>
           ))}
       <div>
-        {console.log(cart)}
         <h3
           onClick={() => {
             navigate(`/book/cart/`, { state: cart });
           }}
         >
-          장바구니 {cnt}
+          장바구니
         </h3>
       </div>
     </div>

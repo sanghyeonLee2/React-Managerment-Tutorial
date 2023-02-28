@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 function Cart() {
-  const location = useLocation();
-  const [item, setItem] = useState([]);
-
-  console.log(location.state[0].id);
+  const [showBooksInCart, setShowBooksInCart] = useState(useLocation().state);
+  const delCart = (books) => {
+    console.log(showBooksInCart.filter((book) => book.id !== books.id));
+    setShowBooksInCart(showBooksInCart.filter((book) => book.id !== books.id));
+    //setShowBooksInCart(showBooksInCart.splice(bookIndex, 1));
+  };
+  const orderCart = () => {};
   return (
     <div>
       <h1>장바구니</h1>
@@ -24,16 +27,52 @@ function Cart() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>
-              <input type="checkbox" />
-            </td>
-            <td>{location.state[0].title}</td>
-            <td>{location.state[0].price}</td>
-            <td>수량</td>
-            <td>{location.state[0].price}</td>
-            <td>주문/삭제</td>
-          </tr>
+          {showBooksInCart.map((book) => {
+            return (
+              <tr key={book.id}>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td>
+                  <p>{book.title}</p>
+                </td>
+                <td>
+                  <p>{book.price}원</p>
+                </td>
+                <td>
+                  <label>
+                    <input type="text" defaultValue={book.num} />
+                    <input
+                      type="button"
+                      value="변경"
+                      onClick={(e) => {
+                        e.target
+                          .closest("tr")
+                          .querySelector("#price").textContent =
+                          book.price *
+                          Number(e.target.previousElementSibling.value);
+                      }}
+                    />
+                  </label>
+                </td>
+                <td>
+                  <p id="price">{book.price * book.num}</p>원
+                </td>
+                <td>
+                  <input
+                    type="button"
+                    value="주문"
+                    onClick={() => orderCart(book)}
+                  />
+                  <input
+                    type="button"
+                    value="삭제"
+                    onClick={() => delCart(book)}
+                  />
+                </td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>

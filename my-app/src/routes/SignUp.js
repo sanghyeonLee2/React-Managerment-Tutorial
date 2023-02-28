@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom"; //useNavigate는 URL주소를 변경할 때 사용하는 Hook
 import axios from "axios";
 
-function SignUp(props) {
+function SignUp() {
   const [name, setName] = useState("");
   const [id, setId] = useState("");
   const [pw, setPw] = useState("");
